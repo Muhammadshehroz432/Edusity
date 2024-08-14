@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Testimonial.css";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
@@ -6,7 +6,12 @@ import user_1 from "../../assets/user-1.png";
 import user_2 from "../../assets/user-2.png";
 import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/user-4.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Testimonial = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const slider = useRef();
   let tx = 0;
 
@@ -24,7 +29,7 @@ const Testimonial = () => {
     slider.current.style.transform = `translateX(${tx}%)`;
   };
   return (
-    <div className="testimonials">
+    <div className="testimonials" data-aos="fade-right">
       <img
         src={next_icon}
         alt="next-btn"

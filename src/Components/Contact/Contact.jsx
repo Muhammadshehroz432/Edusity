@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contact.css";
 import msg_icon from "../../assets/msg-icon.png";
 import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event) => {
@@ -32,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contacts">
+    <div className="contacts" data-aos="fade-up">
       <div className="contact-col">
         <h3>
           Send a message <img src={msg_icon} alt="msg-icon" />
