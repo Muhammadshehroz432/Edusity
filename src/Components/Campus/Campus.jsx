@@ -6,12 +6,18 @@ import gallery_3 from "../../assets/gallery-3.png";
 import gallery_4 from "../../assets/gallery-4.png";
 import white_arrow from "../../assets/white-arrow.png";
 import AOS from "aos";
+import "aos/dist/aos.css";
 const Campus = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="campus" data-aos="fade-up">
+    <div
+      className="campus"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+    >
       <div className="gallery">
         <img src={gallery_1} alt="Gallery 1" />
         <img src={gallery_2} alt="Gallery 1" />

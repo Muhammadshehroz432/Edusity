@@ -29,7 +29,12 @@ const Testimonial = () => {
     slider.current.style.transform = `translateX(${tx}%)`;
   };
   return (
-    <div className="testimonials" data-aos="fade-right">
+    <div
+      className="testimonials"
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+    >
       <img
         src={next_icon}
         alt="next-btn"

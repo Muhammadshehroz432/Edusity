@@ -37,7 +37,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="contacts" data-aos="fade-up">
+    <div
+      className="contacts"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+    >
       <div className="contact-col">
         <h3>
           Send a message <img src={msg_icon} alt="msg-icon" />

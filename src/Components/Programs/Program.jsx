@@ -7,12 +7,18 @@ import Program_icon_1 from "../../assets/program-icon-1.png";
 import Program_icon_2 from "../../assets/program-icon-2.png";
 import Program_icon_3 from "../../assets/program-icon-3.png";
 import AOS from "aos";
+import "aos/dist/aos.css";
 const Program = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div className="programs " data-aos="fade-up">
+    <div
+      className="programs "
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+    >
       <div className="program">
         <img src={Program_1} alt="" />
         <div className="caption">

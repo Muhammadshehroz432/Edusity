@@ -3,6 +3,7 @@ import "./About.css";
 import about_image from "../../assets/about.png";
 import play_icon from "../../assets/play-icon.png";
 import AOS from "aos";
+import "aos/dist/aos.css";
 const About = ({ setPlaystate }) => {
   useEffect(() => {
     AOS.init();
@@ -11,7 +12,12 @@ const About = ({ setPlaystate }) => {
     setPlaystate(true);
   };
   return (
-    <div className="about" data-aos="fade-right">
+    <div
+      className="about"
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+    >
       <div className="about-left">
         <img src={about_image} alt="about-img" className="about-img" />
         <img
